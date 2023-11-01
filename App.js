@@ -1,19 +1,17 @@
-import { View } from "react-native";
-
-// From https://simpleicons.org/?q=expo
-import ExpoLogo from "./assets/expo.svg";
+import { SafeAreaView, View, StyleSheet } from "react-native";
+import PixabayComponnent from "./components/PixabayComponnent";
 
 export default function App() {
   return (
-    <View
-      style={{
-        backgroundColor: "black",
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <ExpoLogo width={120} height={120} fill="white" />
-    </View>
+    <SafeAreaView style={style.safeAre}>
+      <PixabayComponnent />
+    </SafeAreaView>
   );
 }
+
+const style = StyleSheet.create({
+  safeAre: {
+    marginTop: 40,
+    marginLeft: 5,
+  },
+});
